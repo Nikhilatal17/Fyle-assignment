@@ -171,7 +171,7 @@
   }
   
   .error-icon:hover::after {
-    content: "Please enter character only";
+    content: "Please enter number only";
     position: absolute;
     bottom: 120%;
     left: 0;
