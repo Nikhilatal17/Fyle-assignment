@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 8% auto;
+    max-width: 600px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    
+    border: 2px solid rgb(207, 205, 205);
+
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-group .ageInp{
+    height: 40px;
+    border: 1px solid rgb(207, 205, 205);
+    border-radius: 5px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+  }
+  
+  .close{
+   
+    padding: 10px 20px;
+    background-color: #9112ed;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .error-icon {
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    /* background-color: #f00; */
+    border: 1px solid #333;
+    border-radius: 50%;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    visibility: hidden;
+  }
+  .Question-icon{
+    
+    
+    /* position: absolute; */
+    /* top: -10%; */
+    right: 10px;
+    
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    color: #333;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    font-size: 12px;
+  }
+
+  #Question-icon1:hover::after{
+    content: "Gross annual income is your total salary in a year before any deductions";
+    position: absolute;
+    bottom: 120%;
+    /* left: 0; */
+    right: 35%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+  }
+
+  #Question-icon2:hover::after{
+    content: "Extra income is not in added in your Gross annual income";
+    position: absolute;
+    bottom: 120%;
+    /* left: 0; */
+    right: 47%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+  }
+  #Question-icon3:hover::after{
+    content: "Age group is have certain number of groups";
+    position: absolute;
+    bottom: 120%;
+    /* left: 0; */
+    right: 50%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+  }
+  #Question-icon4:hover::after{
+    content: "Applicable deductions is amount which is deduct from annual income + extra income";
+    position: absolute;
+    bottom: 120%;
+    /* left: 0; */
+    right: 25%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+  }
+  
+  .error-icon:hover::after {
+    content: "Please enter character only";
+    position: absolute;
+    bottom: 120%;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100px;
+    text-align: center;
+    visibility: visible;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #9112ed;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #444;
+  }
+  
+  .modal {
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    width: 400px;
+    height:400px;;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgb(207, 205, 205);
+
+  }
+  
+ 
+  
+  .modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color:black}
+
+    .modal-content p {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      
+      .modal-content .tax-amount {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .modal-content .tax-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+      }
+      
+      .modal-content .tax-details label {
+        font-size: 16px;
+        color: #333;
+      }
+      
+      .modal-content .tax-details input[type="text"] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #333;
+        width: 45%;
+      }
+      
+      .modal-content .tax-details .total-tax {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tax Calculator</title>
+</head>
+<body>
+  <div class="container">
+    
+    <form id="tax-form">
+      <div class="form-group">
+        <label for="gross-annual-income">Enter gross annual income <span class="Question-icon" id="Question-icon1">?</span></label>
+        <input type="text" id="gross-annual-income" name="gross-annual-income" placeholder="Enter gross annual income">
+        <div class="error-icon" id="gross-annual-income-error">!</div>
+      </div>
+      <div class="form-group">
+        <label for="extra-income">Enter extra income <span class="Question-icon" id="Question-icon2">?</span></label>
+        <input type="text" id="extra-income" name="extra-income" placeholder="Enter extra income">
+        <div class="error-icon" id="extra-income-error">!</div>
+      </div>
+      <div class="form-group">
+        <label for="age">Enter age group <span class="Question-icon" id="Question-icon3">?</span></label>
+        <input type="number" id="age" name="extra-income" class="ageInp">
+        <div class="error-icon" id="age-error">!</div>
+      </div>
+      <div class="form-group">
+        <label for="total-deductions">Enter total applicable deductions <span class="Question-icon" id="Question-icon4">?</span></label>
+        <input type="text" id="total-deductions" name="total-deductions" placeholder="Enter total applicable deductions">
+        <div class="error-icon" id="total-deductions-error">!</div>
+      </div>
+     
+      <button type="submit">Submit</button>
+    </form>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+       
+        <h2>Your overall income will be</h2>
+        <p><span id="taxable-income"></span></p>
+        <p>after tax deductions</p>
+        <button class="close" id="modal-close">Close</button>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
